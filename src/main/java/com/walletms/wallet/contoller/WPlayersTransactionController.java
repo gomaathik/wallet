@@ -31,8 +31,8 @@ public class WPlayersTransactionController {
     // Getting transaction History of Per Player
     @GetMapping("/transaction/{playerId}")
     public List<WPlayersTransaction> getTrans(@PathVariable("playerId") int playerId) {
-       return wPlayersTransactionService.getAllTrans(playerId);
-           }
+        return wPlayersTransactionService.getAllTrans(playerId);
+    }
 
     //for update the transaction database for all the players
     @PostMapping("/transaction")

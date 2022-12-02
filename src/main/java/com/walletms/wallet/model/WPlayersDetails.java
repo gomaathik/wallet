@@ -1,9 +1,12 @@
 package com.walletms.wallet.model;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
-@Table (name = "PlayerDetails")
+@Table(name = "PlayerDetails")
 public class WPlayersDetails {
     @Id
     @Column
@@ -12,17 +15,21 @@ public class WPlayersDetails {
     private String player;
     @Column
     private int balance;
-    public WPlayersDetails(int playerId, int balance,String name) {
+
+    public WPlayersDetails(int playerId, int balance, String name) {
         this.playerId = playerId;
-        this.player=name;
-        this.balance=balance;
-         }
+        this.player = name;
+        this.balance = balance;
+    }
+
     public WPlayersDetails() {
 
     }
+
     public String getPlayer() {
         return player;
     }
+
     public void setPlayer(String player) {
         this.player = player;
     }
@@ -30,6 +37,7 @@ public class WPlayersDetails {
     public int getPlayerId() {
         return playerId;
     }
+
     public void setPlayerId(int playerId) {
         this.playerId = playerId;
     }
@@ -37,6 +45,7 @@ public class WPlayersDetails {
     public int getBalance() {
         return balance;
     }
+
     public void setBalance(int balance) {
         this.balance = balance;
     }

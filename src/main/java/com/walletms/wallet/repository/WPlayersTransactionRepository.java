@@ -8,6 +8,6 @@ import java.util.List;
 
 @Repository
 public interface WPlayersTransactionRepository extends CrudRepository<WPlayersTransaction, Integer> {
-     List<WPlayersTransaction> findAllByPlayerId(int playerId);
+    List<WPlayersTransaction> findAllByPlayerId(int playerId);
 
 }

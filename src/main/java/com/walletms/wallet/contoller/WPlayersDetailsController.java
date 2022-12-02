@@ -13,8 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class WPlayersDetailsController {
     @Autowired
     WPlayersDetailsService wPlayersDetailsService;
+
     @GetMapping("/player/{playerId}")//Current Balance Per Player
-    public WPlayersDetails getBalanceByPlayerId(@PathVariable("playerId") int playerId){
+    public WPlayersDetails getBalanceByPlayerId(@PathVariable("playerId") int playerId) {
         return wPlayersDetailsService.getBalanceByPlayerId(playerId);
     }
 
